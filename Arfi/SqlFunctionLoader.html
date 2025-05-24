@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Arfi::SqlFunctionLoader
+  
+    &mdash; Documentation by YARD 0.9.37
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Arfi::SqlFunctionLoader";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Arfi.html" title="Arfi (module)">Arfi</a></span></span>
+     &raquo; 
+    <span class="title">SqlFunctionLoader</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Arfi::SqlFunctionLoader
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Arfi::SqlFunctionLoader</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/arfi/sql_function_loader.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p><code>Arfi::SqlFunctionLoader</code> is a class which loads user defined SQL functions into database.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Class Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#task_name-class_method" title="task_name (class method)">.<strong>task_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute task_name.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#conn-class_method" title="conn (class method)">.<strong>conn</strong>  &#x21d2; ActiveRecord::ConnectionAdapters::AbstractAdapter </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::SqlFunctionLoader#conn</tt>                          -&gt; ActiveRecord::ConnectionAdapters::AbstractAdapter.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#handle_db_population-class_method" title="handle_db_population (class method)">.<strong>handle_db_population</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::SqlFunctionLoader#handle_db_population</tt>         -&gt; void.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load!-class_method" title="load! (class method)">.<strong>load!</strong>(task_name: nil)  &#x21d2; nil, void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><code>Arfi::SqlFunctionLoader.load!</code>                        -&gt; (nil | void).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#multi_db%3F-class_method" title="multi_db? (class method)">.<strong>multi_db?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::SqlFunctionLoader#multi_db?</tt>                       -&gt; Boolean.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#populate_db-class_method" title="populate_db (class method)">.<strong>populate_db</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::SqlFunctionLoader#populate_db</tt>                   -&gt; void.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#populate_multiple_db-class_method" title="populate_multiple_db (class method)">.<strong>populate_multiple_db</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::SqlFunctionLoader#populate_multiple_db</tt>          -&gt; void.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#raise_unless_supported_adapter-class_method" title="raise_unless_supported_adapter (class method)">.<strong>raise_unless_supported_adapter</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::SqlFunctionLoader#raise_unless_supported_adapter</tt> -&gt; void.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#sql_files-class_method" title="sql_files (class method)">.<strong>sql_files</strong>  &#x21d2; Array&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::SqlFunctionLoader#sql_files</tt>                     -&gt; Array&lt;String&gt;.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#sql_functions_by_adapter-class_method" title="sql_functions_by_adapter (class method)">.<strong>sql_functions_by_adapter</strong>  &#x21d2; Array&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::SqlFunctionLoader#sql_functions_by_adapter</tt>      -&gt; Array&lt;String&gt;.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="class_attr_details" class="attr_details">
+    <h2>Class Attribute Details</h2>
+    
+      
+      <span id="task_name=-class_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="task_name-class_method">
+  
+    .<strong>task_name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute task_name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_task_name'>task_name</span>
+  <span class='ivar'>@task_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="conn-class_method">
+  
+    .<strong>conn</strong>  &#x21d2; <tt>ActiveRecord::ConnectionAdapters::AbstractAdapter</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><tt>Arfi::SqlFunctionLoader#conn</tt>                          -&gt; ActiveRecord::ConnectionAdapters::AbstractAdapter</p>
+
+<p>Helper method to get database connection.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::ConnectionAdapters::AbstractAdapter</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Database connection.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 150</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_conn'>conn</span>
+  <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/Base.html" title="ActiveRecord::Base (class)">Base</a></span></span><span class='period'>.</span><span class='id identifier rubyid_lease_connection'>lease_connection</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_db_population-class_method">
+  
+    .<strong>handle_db_population</strong>  &#x21d2; <tt>void</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p><tt>Arfi::SqlFunctionLoader#handle_db_population</tt>         -&gt; void</p>
+
+<p>Loads user defined SQL functions into database. This conditional branch was written this way because if we call db:migrate:db_name, then task_name will not be nil, but it will be zero if we call db:migrate. Then we check that the application has been configured to work with multiple databases in order to populate all databases, and only after this check can we populate the database in case the db:migrate (or any other) task has been called for configuration with a single database. Go to ‘lib/arfi/tasks/db.rake` for additional info.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_handle_db_population'>handle_db_population</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_task_name'>task_name</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_multi_db?'>multi_db?</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_populate_db'>populate_db</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_multi_db?'>multi_db?</span>
+    <span class='id identifier rubyid_populate_multiple_db'>populate_multiple_db</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load!-class_method">
+  
+    .<strong>load!</strong>(task_name: nil)  &#x21d2; <tt>nil</tt>, <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><code>Arfi::SqlFunctionLoader.load!</code>                        -&gt; (nil | void)</p>
+
+<p>Loads user defined SQL functions into database.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>task_name</span>
+      
+      
+        <span class='type'>(<tt>String|nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Name of the task.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if there is no ‘db/functions` directory.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>void</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if there is no errors.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load!'>load!</span><span class='lparen'>(</span><span class='label'>task_name:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_task_name'>task_name</span> <span class='op'>=</span> <span class='id identifier rubyid_task_name'>task_name</span><span class='lbracket'>[</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>([^:]+$)</span><span class='regexp_end'>/</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_task_name'>task_name</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>No SQL files found. Skipping db population with ARFI</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_sql_files'>sql_files</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+
+  <span class='id identifier rubyid_raise_unless_supported_adapter'>raise_unless_supported_adapter</span>
+  <span class='id identifier rubyid_handle_db_population'>handle_db_population</span>
+  <span class='id identifier rubyid_conn'>conn</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="multi_db?-class_method">
+  
+    .<strong>multi_db?</strong>  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><tt>Arfi::SqlFunctionLoader#multi_db?</tt>                       -&gt; Boolean</p>
+
+<p>Checks if the application has been configured to work with multiple databases.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_multi_db?'>multi_db?</span>
+  <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/Base.html" title="ActiveRecord::Base (class)">Base</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configurations'>configurations</span><span class='period'>.</span><span class='id identifier rubyid_configurations'>configurations</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span><span class='period'>.</span><span class='id identifier rubyid_env_name'>env_name</span> <span class='op'>==</span> <span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_env'>env</span> <span class='rbrace'>}</span> <span class='op'>&gt;</span> <span class='int'>1</span> <span class='comment'># steep:ignore NoMethod
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="populate_db-class_method">
+  
+    .<strong>populate_db</strong>  &#x21d2; <tt>void</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p><tt>Arfi::SqlFunctionLoader#populate_db</tt>                   -&gt; void</p>
+
+<p>Loads user defined SQL functions into database.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_populate_db'>populate_db</span>
+  <span class='id identifier rubyid_sql_files'>sql_files</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_file'>file</span><span class='op'>|</span>
+    <span class='id identifier rubyid_sql'>sql</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
+    <span class='id identifier rubyid_conn'>conn</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='id identifier rubyid_sql'>sql</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[ARFI] Loaded: </span><span class='embexpr_beg'>#{</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_basename'>basename</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> into </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_conn'>conn</span><span class='period'>.</span><span class='id identifier rubyid_pool'>pool</span><span class='period'>.</span><span class='id identifier rubyid_db_config'>db_config</span><span class='period'>.</span><span class='id identifier rubyid_env_name'>env_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_conn'>conn</span><span class='period'>.</span><span class='id identifier rubyid_pool'>pool</span><span class='period'>.</span><span class='id identifier rubyid_db_config'>db_config</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="populate_multiple_db-class_method">
+  
+    .<strong>populate_multiple_db</strong>  &#x21d2; <tt>void</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p><tt>Arfi::SqlFunctionLoader#populate_multiple_db</tt>          -&gt; void</p>
+
+<p>Loads user defined SQL functions into all databases.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>#multi_db?</li>
+    
+      <li>#populate_db</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84
+85
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_populate_multiple_db'>populate_multiple_db</span>
+  <span class='comment'># steep:ignore:start
+</span>  <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/Base.html" title="ActiveRecord::Base (class)">Base</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configurations'>configurations</span><span class='period'>.</span><span class='id identifier rubyid_configurations'>configurations</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span><span class='period'>.</span><span class='id identifier rubyid_env_name'>env_name</span> <span class='op'>==</span> <span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_env'>env</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_config'>config</span><span class='op'>|</span>
+    <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/Base.html" title="ActiveRecord::Base (class)">Base</a></span></span><span class='period'>.</span><span class='id identifier rubyid_establish_connection'>establish_connection</span><span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_populate_db'>populate_db</span>
+  <span class='kw'>end</span>
+  <span class='comment'># steep:ignore:end
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="raise_unless_supported_adapter-class_method">
+  
+    .<strong>raise_unless_supported_adapter</strong>  &#x21d2; <tt>void</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p><tt>Arfi::SqlFunctionLoader#raise_unless_supported_adapter</tt> -&gt; void</p>
+
+<p>Checks if the database adapter is supported.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Errors/AdapterNotSupported.html" title="Arfi::Errors::AdapterNotSupported (class)">Arfi::Errors::AdapterNotSupported</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_raise_unless_supported_adapter'>raise_unless_supported_adapter</span>
+  <span class='id identifier rubyid_allowed'>allowed</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/ConnectionAdapters.html" title="ActiveRecord::ConnectionAdapters (module)">ConnectionAdapters</a></span></span><span class='op'>::</span><span class='const'>PostgreSQLAdapter</span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/ConnectionAdapters.html" title="ActiveRecord::ConnectionAdapters (module)">ConnectionAdapters</a></span></span><span class='op'>::</span><span class='const'>Mysql2Adapter</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_allowed'>allowed</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_conn'>conn</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rparen'>)</span> <span class='comment'># steep:ignore ArgumentTypeMismatch
+</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../Arfi.html" title="Arfi (module)">Arfi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Errors.html" title="Arfi::Errors (module)">Errors</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Errors/AdapterNotSupported.html" title="Arfi::Errors::AdapterNotSupported (class)">AdapterNotSupported</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sql_files-class_method">
+  
+    .<strong>sql_files</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><tt>Arfi::SqlFunctionLoader#sql_files</tt>                     -&gt; Array&lt;String&gt;</p>
+
+<p>Helper method to get list of SQL files. Here we check if we need to populate all databases or just one.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>List of SQL files.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>#load!</li>
+    
+      <li>#multi_db?</li>
+    
+      <li>#sql_functions_by_adapter</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117
+118
+119
+120
+121
+122</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 116</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sql_files'>sql_files</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_task_name'>task_name</span> <span class='op'>||</span> <span class='id identifier rubyid_multi_db?'>multi_db?</span>
+    <span class='id identifier rubyid_sql_functions_by_adapter'>sql_functions_by_adapter</span>
+  <span class='kw'>else</span>
+    <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>db</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>functions</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>*.sql</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sql_functions_by_adapter-class_method">
+  
+    .<strong>sql_functions_by_adapter</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><tt>Arfi::SqlFunctionLoader#sql_functions_by_adapter</tt>      -&gt; Array&lt;String&gt;</p>
+
+<p>Helper method to get list of SQL files for specific database adapter.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>List of SQL files.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Errors/AdapterNotSupported.html" title="Arfi::Errors::AdapterNotSupported (class)">Arfi::Errors::AdapterNotSupported</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if database adapter is not supported.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sql_functions_by_adapter'>sql_functions_by_adapter</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_conn'>conn</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/ConnectionAdapters.html" title="ActiveRecord::ConnectionAdapters (module)">ConnectionAdapters</a></span></span><span class='op'>::</span><span class='const'>PostgreSQLAdapter</span>
+    <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>db</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>functions</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>postgresql</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>*.sql</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/ConnectionAdapters.html" title="ActiveRecord::ConnectionAdapters (module)">ConnectionAdapters</a></span></span><span class='op'>::</span><span class='const'>Mysql2Adapter</span>
+    <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>db</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>functions</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mysql</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>*.sql</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../Arfi.html" title="Arfi (module)">Arfi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Errors.html" title="Arfi::Errors (module)">Errors</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Errors/AdapterNotSupported.html" title="Arfi::Errors::AdapterNotSupported (class)">AdapterNotSupported</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat May 24 21:56:22 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.4.2).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -23,4 +23,3 @@ the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/)
 [1]:https://github.com/unurgunite/arfi_docs#overview
 
 [2]:https://github.com/unurgunite/arfi_docs#license
-

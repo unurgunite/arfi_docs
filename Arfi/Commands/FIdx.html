@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Arfi::Commands::FIdx
+  
+    &mdash; Documentation by YARD 0.9.37
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Arfi::Commands::FIdx";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Arfi.html" title="Arfi (module)">Arfi</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Commands.html" title="Arfi::Commands (module)">Commands</a></span></span>
+     &raquo; 
+    <span class="title">FIdx</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Arfi::Commands::FIdx
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Thor</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Thor</li>
+          
+            <li class="next">Arfi::Commands::FIdx</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/arfi/commands/f_idx.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p><code>Arfi::Commands::FIdx</code> module contains commands for manipulating functional index in Rails project.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ADAPTERS-constant" class="">ADAPTERS =
+          
+        </dt>
+        <dd><pre class="code"><span class='qsymbols_beg'>%i[</span><span class='tstring_content'>postgresql</span><span class='words_sep'> </span><span class='tstring_content'>mysql</span><span class='tstring_end'>]</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#build_from_file-instance_method" title="#build_from_file (instance method)">#<strong>build_from_file</strong>(index_name)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::Commands::FIdx#build_from_file</tt>                          -&gt; String.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#build_sql_function-instance_method" title="#build_sql_function (instance method)">#<strong>build_sql_function</strong>(index_name)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::Commands::FIdx#build_sql_function</tt>                        -&gt; String.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-instance_method" title="#create (instance method)">#<strong>create</strong>(index_name)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::Commands::FIdx#create</tt>                        -&gt; void.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#create_function_file-instance_method" title="#create_function_file (instance method)">#<strong>create_function_file</strong>(index_name, content)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::Commands::FIdx#create_function_file</tt>                        -&gt; void.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#destroy-instance_method" title="#destroy (instance method)">#<strong>destroy</strong>(index_name)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::Commands::FIdx#destroy</tt>                        -&gt; void.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#extract_latest_version-instance_method" title="#extract_latest_version (instance method)">#<strong>extract_latest_version</strong>(files)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::Commands::FIdx#extract_latest_version</tt>                        -&gt; Integer.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#functions_dir-instance_method" title="#functions_dir (instance method)">#<strong>functions_dir</strong>  &#x21d2; Pathname </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::Commands::FIdx#functions_dir</tt>                        -&gt; Pathname.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate_schema_format!-instance_method" title="#validate_schema_format! (instance method)">#<strong>validate_schema_format!</strong>  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::Commands::FIdx#validate_schema_format!</tt>                        -&gt; void.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#write_file-instance_method" title="#write_file (instance method)">#<strong>write_file</strong>(index_name, content, version)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Arfi::Commands::FIdx#write_file</tt>                        -&gt; void.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="build_from_file-instance_method">
+  
+    #<strong>build_from_file</strong>(index_name)  &#x21d2; <tt>String</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><tt>Arfi::Commands::FIdx#build_from_file</tt>                          -&gt; String</p>
+
+<p>Helper method to build the SQL function. Used with flag ‘–template`.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>index_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Name of the index.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>SQL function body.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#create-instance_method" title="Arfi::Commands::FIdx#create (method)">#create</a></span></li>
+    
+      <li><span class='object_link'><a href="#build_sql_function-instance_method" title="Arfi::Commands::FIdx#build_sql_function (method)">#build_sql_function</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+161
+162
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/commands/f_idx.rb', line 161</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_from_file'>build_from_file</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='rparen'>)</span>
+  <span class='comment'># steep:ignore:start
+</span>  <span class='const'>RubyVM</span><span class='op'>::</span><span class='const'>InstructionSequence</span><span class='period'>.</span><span class='id identifier rubyid_compile'>compile</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>index_name = &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_name'>index_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;; </span><span class='embexpr_beg'>#{</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:template</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_eval'>eval</span>
+  <span class='comment'># steep:ignore:end
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_sql_function-instance_method">
+  
+    #<strong>build_sql_function</strong>(index_name)  &#x21d2; <tt>String</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><tt>Arfi::Commands::FIdx#build_sql_function</tt>                        -&gt; String</p>
+
+<p>Helper method to build the SQL function.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>index_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Name of the index.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>SQL function body.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/commands/f_idx.rb', line 112</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_sql_function'>build_sql_function</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='rparen'>)</span> <span class='comment'># rubocop:disable Metrics/MethodLength
+</span>  <span class='kw'>return</span> <span class='id identifier rubyid_build_from_file'>build_from_file</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:template</span><span class='rbracket'>]</span> <span class='comment'># steep:ignore NoMethod
+</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:adapter</span><span class='rbracket'>]</span> <span class='comment'># steep:ignore NoMethod
+</span>    <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;~SQL</span>
+<span class='tstring_content'>      CREATE OR REPLACE FUNCTION </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_name'>index_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>() RETURNS TEXT[]
+</span><span class='tstring_content'>          LANGUAGE SQL
+</span><span class='tstring_content'>          IMMUTABLE AS
+</span><span class='tstring_content'>      $$
+</span><span class='tstring_content'>          -- Function body here
+</span><span class='tstring_content'>      $$
+</span><span class='heredoc_end'>    SQL
+</span>  <span class='kw'>end</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:adapter</span><span class='rbracket'>]</span> <span class='comment'># steep:ignore NoMethod
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>postgresql</span><span class='tstring_end'>&#39;</span></span>
+    <span class='heredoc_beg'>&lt;&lt;~SQL</span>
+<span class='tstring_content'>      CREATE OR REPLACE FUNCTION </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_name'>index_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>() RETURNS TEXT[]
+</span><span class='tstring_content'>          LANGUAGE SQL
+</span><span class='tstring_content'>          IMMUTABLE AS
+</span><span class='tstring_content'>      $$
+</span><span class='tstring_content'>          -- Function body here
+</span><span class='tstring_content'>      $$
+</span><span class='heredoc_end'>    SQL
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mysql</span><span class='tstring_end'>&#39;</span></span>
+    <span class='heredoc_beg'>&lt;&lt;~SQL</span>
+<span class='tstring_content'>      CREATE FUNCTION </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_name'>index_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> ()
+</span><span class='tstring_content'>      RETURNS return_type
+</span><span class='tstring_content'>      BEGIN
+</span><span class='tstring_content'>        -- Function body here
+</span><span class='tstring_content'>      END;
+</span><span class='heredoc_end'>    SQL
+</span>  <span class='kw'>else</span>
+    <span class='comment'># steep:ignore:start
+</span>    <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unknown adapter: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:adapter</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>. Supported adapters: </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#ADAPTERS-constant" title="Arfi::Commands::FIdx::ADAPTERS (constant)">ADAPTERS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='comment'># steep:ignore:end
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create-instance_method">
+  
+    #<strong>create</strong>(index_name)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p><tt>Arfi::Commands::FIdx#create</tt>                        -&gt; void</p>
+
+<p>This command is used to create the functional index.</p>
+
+<p>ARFI also supports the use of custom templates for SQL functions, but now there are some restrictions and rules according to which it is necessary to describe the function. First, the function must be written in a Ruby-compatible syntax: the file name is not so important, but the name for the function name must be interpolated with the <code>index_name</code> variable name, and the function itself must be placed in the HEREDOC statement. Below is an example file.</p>
+
+<p>To use a custom template, add the –template flag.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_arfi'>arfi</span> <span class='id identifier rubyid_f_idx'>f_idx</span> <span class='id identifier rubyid_create'>create</span> <span class='id identifier rubyid_some_function'>some_function</span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='comment'># ./template/my_custom_template
+</span><span class='heredoc_beg'>&lt;&lt;~SQL</span>
+<span class='tstring_content'>CREATE OR REPLACE FUNCTION </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_name'>index_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>() RETURNS TEXT[]
+  LANGUAGE SQL
+  IMMUTABLE AS
+$$
+  -- Function body here
+$$
+</span><span class='heredoc_end'>SQL</span></code></pre>
+    
+      
+      <pre class="example code"><code>bundle exec arfi f_idx create some_function --template ./template/my_custom_template</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>index_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Name of the index.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Errors/InvalidSchemaFormat.html" title="Arfi::Errors::InvalidSchemaFormat (class)">Arfi::Errors::InvalidSchemaFormat</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if ActiveRecord.schema_format is not :ruby</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Errors/NoFunctionsDir.html" title="Arfi::Errors::NoFunctionsDir (class)">Arfi::Errors::NoFunctionsDir</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if there is no ‘db/functions` directory</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#validate_schema_format!-instance_method" title="Arfi::Commands::FIdx#validate_schema_format! (method)">#validate_schema_format!</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/commands/f_idx.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_validate_schema_format!'>validate_schema_format!</span>
+  <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='id identifier rubyid_build_sql_function'>build_sql_function</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_create_function_file'>create_function_file</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_function_file-instance_method">
+  
+    #<strong>create_function_file</strong>(index_name, content)  &#x21d2; <tt>void</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p><tt>Arfi::Commands::FIdx#create_function_file</tt>                        -&gt; void</p>
+
+<p>Helper method to create the index file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>index_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Name of the index.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>SQL function body.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+176
+177
+178
+179
+180
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/commands/f_idx.rb', line 176</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_function_file'>create_function_file</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_existing_files'>existing_files</span> <span class='op'>=</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_functions_dir'>functions_dir</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_name'>index_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>*.sql</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_write_file'>write_file</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_existing_files'>existing_files</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+  <span class='id identifier rubyid_latest_version'>latest_version</span> <span class='op'>=</span> <span class='id identifier rubyid_extract_latest_version'>extract_latest_version</span><span class='lparen'>(</span><span class='id identifier rubyid_existing_files'>existing_files</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_write_file'>write_file</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_latest_version'>latest_version</span><span class='period'>.</span><span class='id identifier rubyid_succ'>succ</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="destroy-instance_method">
+  
+    #<strong>destroy</strong>(index_name)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p><tt>Arfi::Commands::FIdx#destroy</tt>                        -&gt; void</p>
+
+<p>This command is used to delete the functional index.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code>bundle exec arfi f_idx destroy some_function [revision index (just an integer, 1 is by default)]</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>index_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Name of the index.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Errors/InvalidSchemaFormat.html" title="Arfi::Errors::InvalidSchemaFormat (class)">Arfi::Errors::InvalidSchemaFormat</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if ActiveRecord.schema_format is not :ruby</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83
+84
+85
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/commands/f_idx.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_validate_schema_format!'>validate_schema_format!</span>
+
+  <span class='id identifier rubyid_revision'>revision</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:revision</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>01</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># steep:ignore NoMethod
+</span>  <span class='id identifier rubyid_revision'>revision</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_revision'>revision</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='const'>FileUtils</span><span class='period'>.</span><span class='id identifier rubyid_rm'>rm</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_functions_dir'>functions_dir</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_name'>index_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_v</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_revision'>revision</span><span class='embexpr_end'>}</span><span class='tstring_content'>.sql</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Deleted: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_functions_dir'>functions_dir</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_name'>index_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_v</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_revision'>revision</span><span class='embexpr_end'>}</span><span class='tstring_content'>.sql</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="extract_latest_version-instance_method">
+  
+    #<strong>extract_latest_version</strong>(files)  &#x21d2; <tt>String</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><tt>Arfi::Commands::FIdx#extract_latest_version</tt>                        -&gt; Integer</p>
+
+<p>Helper method to extract the latest version of the index.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>files</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>List of files.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Latest version of the index.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+193
+194
+195
+196
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/commands/f_idx.rb', line 193</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_extract_latest_version'>extract_latest_version</span><span class='lparen'>(</span><span class='id identifier rubyid_files'>files</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_version_numbers'>version_numbers</span> <span class='op'>=</span> <span class='id identifier rubyid_files'>files</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_file'>file</span><span class='op'>|</span>
+    <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_basename'>basename</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\w+_v(\d+)\.sql</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+
+  <span class='id identifier rubyid_version_numbers'>version_numbers</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="functions_dir-instance_method">
+  
+    #<strong>functions_dir</strong>  &#x21d2; <tt>Pathname</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><tt>Arfi::Commands::FIdx#functions_dir</tt>                        -&gt; Pathname</p>
+
+<p>Helper method to get path to ‘db/functions` directory.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Pathname</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Path to ‘db/functions` directory</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/commands/f_idx.rb', line 225</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_functions_dir'>functions_dir</span>
+  <span class='comment'># steep:ignore:start
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:adapter</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../../Arfi.html" title="Arfi (module)">Arfi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Errors.html" title="Arfi::Errors (module)">Errors</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Errors/AdapterNotSupported.html" title="Arfi::Errors::AdapterNotSupported (class)">AdapterNotSupported</a></span></span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="#ADAPTERS-constant" title="Arfi::Commands::FIdx::ADAPTERS (constant)">ADAPTERS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:adapter</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
+
+    <span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>db/functions/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:adapter</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='comment'># steep:ignore:end
+</span>  <span class='kw'>else</span>
+    <span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>db/functions</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_schema_format!-instance_method">
+  
+    #<strong>validate_schema_format!</strong>  &#x21d2; <tt>nil</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><tt>Arfi::Commands::FIdx#validate_schema_format!</tt>                        -&gt; void</p>
+
+<p>Helper method to validate the schema format.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the schema format is valid.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Errors/InvalidSchemaFormat.html" title="Arfi::Errors::InvalidSchemaFormat (class)">Arfi::Errors::InvalidSchemaFormat</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if ActiveRecord.schema_format is not :ruby.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/commands/f_idx.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_schema_format!'>validate_schema_format!</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../../Arfi.html" title="Arfi (module)">Arfi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Errors.html" title="Arfi::Errors (module)">Errors</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Errors/InvalidSchemaFormat.html" title="Arfi::Errors::InvalidSchemaFormat (class)">InvalidSchemaFormat</a></span></span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="../../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='period'>.</span><span class='id identifier rubyid_schema_format'>schema_format</span> <span class='op'>==</span> <span class='symbol'>:ruby</span> <span class='comment'># steep:ignore NoMethod
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_file-instance_method">
+  
+    #<strong>write_file</strong>(index_name, content, version)  &#x21d2; <tt>void</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p><tt>Arfi::Commands::FIdx#write_file</tt>                        -&gt; void</p>
+
+<p>Helper method to write the index file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>index_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Name of the index.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>SQL function body.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>version</span>
+      
+      
+        <span class='type'>(<tt>String|Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Version of the index.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+211
+212
+213
+214
+215
+216</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/arfi/commands/f_idx.rb', line 211</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_write_file'>write_file</span><span class='lparen'>(</span><span class='id identifier rubyid_index_name'>index_name</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_version'>version</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_version_str'>version_str</span> <span class='op'>=</span> <span class='id identifier rubyid_format'>format</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>%02d</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_version'>version</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_functions_dir'>functions_dir</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_name'>index_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_v</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_version_str'>version_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>.sql</span><span class='tstring_end'>&quot;</span></span>
+  <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Created: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat May 24 21:56:22 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.4.2).
+</div>
+
+    </div>
+  </body>
+</html>
