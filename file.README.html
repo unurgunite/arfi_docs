@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.37
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-ARFI">ARFI</h1>
+
+<p><img src="https://img.shields.io/github/actions/workflow/status/unurgunite/arfi/main.yml" alt="Build"> status <a href="https://badge.fury.io/rb/arfi"><img src="https://badge.fury.io/rb/arfi.svg" alt="Gem Version"></a></p>
+
+<p><img src="https://repobeats.axiom.co/api/embed/324b4f481b219890ef5a26e3c6fb73fff8929c93.svg" alt="Alt"></p>
+<hr>
+
+<blockquote>
+<p>[!WARNING] This project only supports PostgreSQL and MySQL databases. SQLite3 will be supported in the future as well as other databases supported by Rails.</p>
+
+<p>[!NOTE] This project requires Ruby 3.1.0+, in future updated 2.6+ Ruby versions will be supported.</p>
+</blockquote>
+<hr>
+
+<p>ARFI – <em>ActiveRecord Functional Indexes</em></p>
+
+<p>The ARFI gem provides the ability to create and maintain custom SQL functions for ActiveRecord models without switching to <code>structure.sql</code> (an SQL-based schema). You can use your own SQL functions in any part of the project, from migrations and models to everything else. There is a working example in the <a href="https://github.com/unurgunite/poc_arfi_72">demo project</a>. All instructions are described in <a href="https://github.com/unurgunite/poc_arfi_72/blob/master/README.md">README</a>. ARFI supports all types of database architectures implemented in Rails, suitable for both working with single databases and for simultaneous work with multiple databases in the same environment.</p>
+<ul><li>
+<p><a href="#arfi">ARFI</a></p>
+<ul><li>
+<p><a href="#installation">Installation</a></p>
+</li><li>
+<p><a href="#usage">Usage</a></p>
+<ul><li>
+<p><a href="#cli">CLI</a></p>
+</li><li>
+<p><a href="#project-creation">Project creation</a></p>
+</li><li>
+<p><a href="#index-creation">Index creation</a></p>
+</li><li>
+<p><a href="#index-destroy">Index destroy</a></p>
+</li><li>
+<p><a href="#additional-help">Additional help</a></p>
+</li></ul>
+</li><li>
+<p><a href="#demo">Demo</a></p>
+</li><li>
+<p><a href="#library-features">Library features</a></p>
+</li><li>
+<p><a href="#roadmap">Roadmap</a></p>
+</li><li>
+<p><a href="#commands">Commands</a></p>
+<ul><li>
+<p><a href="#function-creation">Function creation</a></p>
+</li><li>
+<p><a href="#function-destroy">Function destroy</a></p>
+<ul><li>
+<p><a href="#options">Options</a></p>
+<ul><li>
+<p>option[#–template-option]</p>
+</li><li>
+<p>option[#–adapter-option]</p>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li>
+<p><a href="#limitations">Limitations</a></p>
+</li><li>
+<p><a href="#development">Development</a></p>
+<ul><li>
+<p><a href="#build-from-source">Build from source</a></p>
+</li></ul>
+</li><li>
+<p><a href="#requirements">Requirements</a></p>
+</li><li>
+<p><a href="#contributing">Contributing</a></p>
+</li><li>
+<p><a href="#miscellaneous">Miscellaneous</a></p>
+</li><li>
+<p><a href="#license">License</a></p>
+</li><li>
+<p><a href="#code-of-conduct">Code of Conduct</a></p>
+</li></ul>
+</li></ul>
+
+<h2 id="label-Installation">Installation</h2>
+
+<p>Install the gem and add to the application’s Gemfile by executing:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_add'>add</span> <span class='id identifier rubyid_arfi'>arfi</span>
+</code></pre>
+
+<h2 id="label-Usage">Usage</h2>
+
+<h3 id="label-CLI">CLI</h3>
+
+<p>ARFI uses Thor as a command line interface (CLI) instead of Rake, so it has a specific DSL.</p>
+
+<h3 id="label-Project+creation">Project creation</h3>
+
+<p>Firstly, run <code>bundle exec arfi project create</code> to create a new project. This command will create <code>db/functions</code> directory. ARFI uses <code>db/functions</code> directory to store your functional indexes.</p>
+
+<h3 id="label-Index+creation">Index creation</h3>
+
+<p>Run <code>bundle exec arfi f_idx create function_name</code> to create a new functional index. New index will be created in <code>db/functions</code> directory under <code>function_name_v01.sql</code> name. Edit you index and run <code>bundle exec rails db:migrate</code>. You can also use custom template for index. Type <code>bundle exec arfi f_idx help create</code> for additional info.</p>
+
+<h3 id="label-Index+destroy">Index destroy</h3>
+
+<p>If you want to destroy your index, run <code>bundle exec arfi f_idx destroy function_name [revision (1 by default)]</code></p>
+
+<h3 id="label-Additional+help">Additional help</h3>
+
+<p>Run <code>bundle exec arfi</code> for additional help.</p>
+
+<h2 id="label-Demo">Demo</h2>
+
+<p>Demo available as separate project built with Rails 7.2 and PostgreSQL 14: <a href="https://github.com/unurgunite/poc_arfi_72">github.com/unurgunite/poc_arfi_72</a>. README is also available.</p>
+
+<h2 id="label-Library+features">Library features</h2>
+<ol><li>
+<p>ARFI supports about all types of database initialization. It respects your database schema format and database configuration.</p>
+</li></ol>
+
+<p>| Task | Completed | |——————|————————————————————–| | db:migrate | :white_check_mark: | | db:setup | :white_check_mark: | | db:prepare | :white_check_mark: | | db:schema:load | :white_check_mark: | | db:reset | :white_check_mark: | | db:setup:db_name | In progress (see <a href="https://blog.saeloun.com/2021/10/27/rails-7-adds-database-specific-setup/#limitation">limitations</a>) :arrows_counterclockwise: |</p>
+<ol><li>
+<p>Database support. ARFI supports PostgreSQL and MySQL databases and projects with multiple databases at the same time.</p>
+</li></ol>
+
+<p>| DB adapter | Tested | |————|—————————————| | PostgreSQL | :white_check_mark: | | MySQL | :white_check_mark: | | SQLite3 | In progress :arrows_counterclockwise: |</p>
+<ol><li>
+<p>Rails support</p>
+</li></ol>
+
+<p>| Rails version | Tested | |—————|—————————————| | 8 | :white_check_mark: | | 7 | :white_check_mark: | | 6 | In progress :arrows_counterclockwise: |</p>
+
+<h2 id="label-Roadmap">Roadmap</h2>
+<ol><li>
+<p>&lt;s&gt;Custom template for SQL functions using <code>--template</code> flag;&lt;/s&gt;</p>
+</li><li>
+<p>&lt;s&gt;Multidb support (Rails 6+ feature);&lt;/s&gt;</p>
+</li><li>
+<p>Add support for 4+ ActiveRecord;</p>
+</li><li>
+<p>Add RSpec tests;</p>
+</li><li>
+<p>Add separate YARD doc page;</p>
+</li><li>
+<p>&lt;s&gt;Update CI/CD;&lt;/s&gt;</p>
+</li><li>
+<p>Add support for Ruby 2.6+.</p>
+</li></ol>
+
+<h2 id="label-Commands">Commands</h2>
+
+<p>ARFI has a set of commands to work with SQL functions. Type <code>bundle exec arfi help</code> for additional help. As noted above, ARFI uses Thor as a command line interface.</p>
+
+<h3 id="label-Function+creation">Function creation</h3>
+
+<p>ARFI supports creation of SQL functions. To create a new function, run <code>bundle exec arfi f_idx create function_name</code>. Also, there are some options:</p>
+
+<table role="table">
+<thead>
+<tr>
+<th>Option name</th>
+<th>Description</th>
+<th>Possible values</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>‘–template`</td>
+<td>use custom template</td>
+<td>path within you filesystem</td>
+<td>nil (will be used default template for each type of adapters)</td>
+</tr>
+<tr>
+<td>‘–adapter`</td>
+<td>adapter specific function creation due to syntax differences between different RDBMS</td>
+<td>postgresql, mysql</td>
+<td>nil (function will be stored in generic ‘db/functions`)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="label-Function+destroy">Function destroy</h3>
+
+<p>ARFI supports destroy of SQL functions. To destroy a function, run <code>bundle exec arfi f_idx destroy function_name [revision (1 by default)]</code>.</p>
+
+<table role="table">
+<thead>
+<tr>
+<th>Option name</th>
+<th>Description</th>
+<th>Possible values</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>‘–revision`</td>
+<td>Function revision to destroy</td>
+<td>Integer</td>
+<td>1</td>
+</tr>
+<tr>
+<td>‘–adapter`</td>
+<td>adapter specific function</td>
+<td>postgresql, mysql</td>
+<td>nil (function will be destroyed in generic ‘db/functions`)</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="label-Options">Options</h4>
+
+<h5 id="label--template+option"><code>--template</code> option</h5>
+
+<p>This option is used for creating an SQL function. In this case, the function will not be created with the default template, but with user defined. There are some rules for templates:</p>
+<ol><li>
+<p>The template must be written in a Ruby-compatible syntax: the function must be placed in a HEREDOC statement and must use interpolation for variables. If you need to take a more comprehensive approach to the issue of function generation, you can try using your own methods in the template file. No matter what you write there, the main rule is that your main method should return a string with a function template, as described below.</p>
+</li><li>
+<p>ARFI supports dynamic variables in templates, but only one at the moment. You need to specify <code>index_name</code> variable as below. In feature updated ARFI will support more variables. Here are default templates in ARFI for PostgreSQL and MySQL:</p>
+</li></ol>
+
+<p>PostgreSQL: <code>ruby    &lt;&lt;~SQL      CREATE OR REPLACE FUNCTION #{index_name}() RETURNS TEXT[]      LANGUAGE SQL      IMMUTABLE AS      $$        -- Function body here      $$    SQL </code> MySQL: <code>ruby    &lt;&lt;~SQL      CREATE FUNCTION #{index_name} ()      RETURNS return_type      BEGIN        -- Function body here      END;    SQL </code> 3. By default ARFI uses PostgreSQL template.</p>
+
+<h5 id="label--adapter+option"><code>--adapter</code> option</h5>
+
+<p>This option is used both when destroying and when creating an SQL function. In this case, the function will not be created in the default directory <code>db/functions</code>, but in the child <code>db/functions/#{adapter}</code>. Supported adapters: <code>postgresql</code>and <code>mysql</code>, but there will be more in the future.</p>
+
+<h2 id="label-Limitations">Limitations</h2>
+
+<p>Currently, ARFI has a limitation for <code>db:setup:db_name</code> task due to the fact how Rails manage this rake task. More info here: <a href="https://blog.saeloun.com/2021/10/27/rails-7-adds-database-specific-setup/#limitation">limitations</a>. This command will work, but it is not recommended to use it. Note that this limitation applies only to multi-db setup, default <code>db:setup</code> will work as expected.</p>
+
+<h2 id="label-Development">Development</h2>
+
+<h3 id="label-Build+from+source">Build from source</h3>
+
+<p>The manual installation includes installation via command line interface. it is practically no different from what happens during the automatic build of the project:</p>
+
+<pre class="code ruby"><code class="ruby">git clone https://github.com/unurgunite/arfi.git
+cd arfi
+bundle install
+gem build arfi.gemspec
+gem install arfi-0.5.0.gem
+</code></pre>
+
+<p>Also, you can run <code>bin/setup</code> to automatically install everything needed.</p>
+
+<h2 id="label-Requirements">Requirements</h2>
+
+<p>ARFI is built on top of the following gems:</p>
+
+<table role="table">
+<thead>
+<tr>
+<th>Dependencies</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ActiveRecord</td>
+<td>Used to patch ‘ActiveRecord::Base` module with new methods.</td>
+</tr>
+<tr>
+<td>Rails</td>
+<td>Used for fetching project settings (database connection settings, Rails environment, etc.)</td>
+</tr>
+<tr>
+<td>Thor</td>
+<td>For CLI development.</td>
+</tr>
+<tr>
+<td>Rubocop</td>
+<td>For static code analysis.</td>
+</tr>
+<tr>
+<td>Rake</td>
+<td>For patching built-in Rails Rake tasks.</td>
+</tr>
+<tr>
+<td>Steep</td>
+<td>For static type checking.</td>
+</tr>
+<tr>
+<td>RBS</td>
+<td>For static type checking.</td>
+</tr>
+<tr>
+<td>YARD</td>
+<td>For generating documentation.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="label-Contributing">Contributing</h2>
+
+<p>Bug reports and pull requests are welcome on GitHub at <a href="https://github.com/unurgunite/arfi">github.com/unurgunite/arfi</a>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="https://github.com/unurgunite/arfi/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+
+<h2 id="label-Miscellaneous">Miscellaneous</h2>
+
+<p>ARFI is highly inspired by <a href="https://github.com/teoljungberg/fx">github.com/teoljungberg/fx</a> project.</p>
+
+<h2 id="label-License">License</h2>
+
+<p>The gem is available as open source under the terms of the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+
+<h2 id="label-Code+of+Conduct">Code of Conduct</h2>
+
+<p>Everyone interacting in the ARFI project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the <a href="https://github.com/unurgunite/arfi/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Sat May 24 21:45:26 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.4.2).
+</div>
+
+    </div>
+  </body>
+</html>
