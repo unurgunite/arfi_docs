@@ -154,15 +154,15 @@
 
 <h3 id="label-Project+creation">Project creation</h3>
 
-<p>Firstly, run <code>bundle exec arfi project create</code> to create a new project. This command will create <code>db/functions</code> directory. ARFI uses <code>db/functions</code> directory to store your functional indexes.</p>
+<p>Firstly, run <code>bundle exec arfi project create</code> to create a new project. This command will create <code>db/functions</code> directory. ARFI uses <code>db/functions</code> directory to store your SQL functions.</p>
 
-<h3 id="label-Index+creation">Index creation</h3>
+<h3 id="label-Function+creation">Function creation</h3>
 
-<p>Run <code>bundle exec arfi f_idx create function_name</code> to create a new functional index. New index will be created in <code>db/functions</code> directory under <code>function_name_v01.sql</code> name. Edit you index and run <code>bundle exec rails db:migrate</code>. You can also use custom template for index. Type <code>bundle exec arfi f_idx help create</code> for additional info.</p>
+<p>Run <code>bundle exec arfi f_idx create function_name</code> to create a new function. New SQL function will be created in <code>db/functions</code> directory under <code>function_name_v01.sql</code> name. Edit your function and run <code>bundle exec rails db:migrate</code>. You can also use custom template for functions using <code>--template</code> flag, this behaviour is described below. Type <code>bundle exec arfi f_idx help create</code> for additional info.</p>
 
-<h3 id="label-Index+destroy">Index destroy</h3>
+<h3 id="label-Function+destroy">Function destroy</h3>
 
-<p>If you want to destroy your index, run <code>bundle exec arfi f_idx destroy function_name [revision (1 by default)]</code></p>
+<p>If you want to destroy your function, run <code>bundle exec arfi f_idx destroy function_name [revision (default 1)]</code>. Please note that after deleting the function, it will still be available, but if you run “bundle exec rails db:migrate” again, an error will occur when using the function. Enter <code>bundle exec arfi f_idx help destroy</code> for more information.</p>
 
 <h3 id="label-Additional+help">Additional help</h3>
 
@@ -369,7 +369,7 @@ gem install arfi-0.5.0.gem
 </div></div>
 
       <div id="footer">
-  Generated on Sat May 24 22:07:08 2025 by
+  Generated on Sun May 25 13:07:41 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.2).
 </div>

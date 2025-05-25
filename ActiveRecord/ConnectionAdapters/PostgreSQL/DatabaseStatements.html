@@ -115,7 +115,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>This patch is used for db:prepare task.</p>
+</div></span>
   
 </li>
 
@@ -138,13 +140,23 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This patch is used for db:prepare task.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-9
 10
 11
 12
@@ -162,10 +174,11 @@
 24
 25
 26
-27</pre>
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/arfi/extensions/active_record/connection_adapters/postgresql/database_statements.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/arfi/extensions/active_record/connection_adapters/postgresql/database_statements.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_raw_execute'>raw_execute</span><span class='lparen'>(</span><span class='id identifier rubyid_sql'>sql</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>async:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>allow_retry:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>materialize_transactions:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_sql'>sql</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>async:</span> <span class='id identifier rubyid_async'>async</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_notification_payload'>notification_payload</span><span class='op'>|</span>
@@ -196,7 +209,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat May 24 22:07:08 2025 by
+  Generated on Sun May 25 13:07:41 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.2).
 </div>
