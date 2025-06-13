@@ -478,13 +478,21 @@
 
 148
 149
-150</pre>
+150
+151
+152
+153
+154</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/arfi/sql_function_loader.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_conn'>conn</span>
-  <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/Base.html" title="ActiveRecord::Base (class)">Base</a></span></span><span class='period'>.</span><span class='id identifier rubyid_lease_connection'>lease_connection</span>
+  <span class='kw'>if</span> <span class='const'>Rails</span><span class='op'>::</span><span class='const'>VERSION</span><span class='op'>::</span><span class='const'>MAJOR</span> <span class='op'>&lt;</span> <span class='int'>7</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='const'>Rails</span><span class='op'>::</span><span class='const'>VERSION</span><span class='op'>::</span><span class='const'>MAJOR</span> <span class='op'>==</span> <span class='int'>7</span> <span class='op'>&amp;&amp;</span> <span class='const'>Rails</span><span class='op'>::</span><span class='const'>VERSION</span><span class='op'>::</span><span class='const'>MINOR</span> <span class='op'>&lt;</span> <span class='int'>2</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/Base.html" title="ActiveRecord::Base (class)">Base</a></span></span><span class='period'>.</span><span class='id identifier rubyid_connection'>connection</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ActiveRecord/Base.html" title="ActiveRecord::Base (class)">Base</a></span></span><span class='period'>.</span><span class='id identifier rubyid_lease_connection'>lease_connection</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1060,7 +1068,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun May 25 13:18:59 2025 by
+  Generated on Fri Jun 13 10:16:51 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.2).
 </div>
